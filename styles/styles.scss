@@ -27,7 +27,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     color: var(--color-white);
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 a {
@@ -80,13 +80,27 @@ section {
 .sec4 {
     display: none;
     transform: translateY(0) scale(1);
+    background-color: red;
 }
 
 .sec5 {
     display: none;
     transform: translateY(0) scale(1);
+    background-color: yellow;
 }
 
+.active{
+    display: block;
+    animation: scaleAnim 1s ease-in-out;
+    @keyframes scaleAnim{
+        0%{
+            transform: translateY(-100%) scaleY(0)
+        }
+        100%{
+            transform: translateY(0) scaleY(1)
+        }
+    }
+}
 //controls
 .controlls {
     position: fixed;
